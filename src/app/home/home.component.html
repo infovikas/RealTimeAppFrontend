@@ -1,0 +1,18 @@
+<mat-card class="mtcard">
+  <mat-card-title>Send a Contnent</mat-card-title>
+  <div class="example-container">
+    <form #f="ngForm">
+        <div class="example-container">
+      <mat-form-field class="text">
+        <input matInput placeholder="Enter Title" name="title" ngModel  #title="ngModel" required>
+      </mat-form-field>
+      <mat-form-field class="msg" appearance="outline">
+        <mat-label>Your Message</mat-label>
+        <textarea class="text" matInput placeholder="Start typing..." ngModel name="content" #content="ngModel" required></textarea>
+      </mat-form-field>
+      </div>
+      <button class="btn" mat-raised-button color="primary" (click)="msgSend(f.value)"(click)="routernavigation()">Submit</button>
+    </form>
+  </div>
+</mat-card>
+  

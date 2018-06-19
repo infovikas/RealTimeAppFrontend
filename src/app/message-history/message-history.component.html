@@ -1,0 +1,12 @@
+<div class="msglist">
+  <h3>Message History</h3>
+  <p>Note: Click to see more</p>
+  <mat-card-subtitle> Displaying Top 10 latest Messages only</mat-card-subtitle>
+  <mat-list role="list" *ngFor="let item of messages |orderByDoneAndDate | slice:0:10 let i = index" [attr.data-index]="i" [style.margin-top.px]="'10'" (click)="details()" (click)="data(messages[messages.length-i-1])"
+    ngDefaultControl>
+    <mat-card class="items">
+      <mat-card-content>Title: {{ item['title'] }}</mat-card-content>
+      <mat-card-subtitle>Message sent at: {{ item['created'] | date:'yyyy-MM-dd HH:mm:ss a z':'+0530' }}</mat-card-subtitle>
+    </mat-card>
+  </mat-list>
+</div>

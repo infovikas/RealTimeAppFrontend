@@ -1,0 +1,6 @@
+<h2>Content details</h2>
+<mat-card>
+  <mat-card-title>Title: {{details.title}}</mat-card-title>
+  <mat-card-subtitle> Created At: {{ details['created'] | date:'yyyy-MM-dd HH:mm:ss a z':'+0530' }}</mat-card-subtitle>
+  <mat-card-content>Content: {{details.content}}</mat-card-content>
+</mat-card>
